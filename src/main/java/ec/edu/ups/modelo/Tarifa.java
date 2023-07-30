@@ -62,4 +62,8 @@ public class Tarifa {
     public String toString() {
         return "Tarifa{" + "id_Tarifa=" + id_Tarifa + ", tipo_tarifa=" + tipo_tarifa + ", precioActual=" + precioActual + '}';
     } 
+
 }
+
+
+

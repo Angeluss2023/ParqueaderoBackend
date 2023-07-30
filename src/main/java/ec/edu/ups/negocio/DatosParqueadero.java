@@ -6,15 +6,15 @@ import java.time.LocalTime;
 import java.util.List;
 
 import ec.edu.ups.modelo.Ticket;
+import ec.edu.ups.ppw.Parqueadero.DetalleTicketDAO;
+import ec.edu.ups.ppw.Parqueadero.TarifaDAO;
+import ec.edu.ups.ppw.Parqueadero.TicketDAO;
+import ec.edu.ups.ppw.Parqueadero.VehiculoDAO;
 import ec.edu.ups.servicios.GTicketService;
 import jakarta.annotation.PostConstruct;
 import jakarta.ejb.Singleton;
 import jakarta.ejb.Startup;
 import jakarta.inject.Inject;
-import ups.edu.ec.ppw.Parqueadero.DetalleTicketDAO;
-import ups.edu.ec.ppw.Parqueadero.TarifaDAO;
-import ups.edu.ec.ppw.Parqueadero.TicketDAO;
-import ups.edu.ec.ppw.Parqueadero.VehiculoDAO;
 
 @Singleton
 @Startup

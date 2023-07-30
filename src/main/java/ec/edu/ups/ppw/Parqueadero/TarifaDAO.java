@@ -1,4 +1,4 @@
-package ups.edu.ec.ppw.Parqueadero;
+package ec.edu.ups.ppw.Parqueadero;
 
 import java.io.Serializable;
 import java.util.List;
@@ -42,4 +42,5 @@ public class TarifaDAO implements Serializable{
 		Query q = em.createQuery(jpql);
 		return q.getResultList();
 	}
+
 }

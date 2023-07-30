@@ -1,4 +1,5 @@
-package ups.edu.ec.ppw.Parqueadero;
+
+package ec.edu.ups.ppw.Parqueadero;
 
 import java.io.Serializable;
 import java.util.List;
@@ -44,3 +45,4 @@ public class TicketDAO implements Serializable{
 		return q.getResultList();
 	}
 }
+

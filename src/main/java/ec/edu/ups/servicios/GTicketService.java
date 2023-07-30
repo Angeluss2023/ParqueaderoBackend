@@ -5,6 +5,8 @@ import java.util.List;
 import ec.edu.ups.modelo.Ticket;
 import ec.edu.ups.modelo.Vehiculo;
 import ec.edu.ups.negocio.GestionParqueadero;
+import ec.edu.ups.ppw.Parqueadero.TicketDAO;
+import ec.edu.ups.ppw.Parqueadero.VehiculoDAO;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -14,8 +16,6 @@ import jakarta.ws.rs.PUT;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.Response;
-import ups.edu.ec.ppw.Parqueadero.TicketDAO;
-import ups.edu.ec.ppw.Parqueadero.VehiculoDAO;
 
 @Path("ticket")
 public class GTicketService {

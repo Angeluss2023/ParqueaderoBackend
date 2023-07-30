@@ -6,10 +6,10 @@ import java.util.List;
 
 import ec.edu.ups.modelo.Ticket;
 import ec.edu.ups.modelo.Vehiculo;
+import ec.edu.ups.ppw.Parqueadero.TicketDAO;
+import ec.edu.ups.ppw.Parqueadero.VehiculoDAO;
 import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
-import ups.edu.ec.ppw.Parqueadero.TicketDAO;
-import ups.edu.ec.ppw.Parqueadero.VehiculoDAO;
 
 @Stateless
 public class GestionParqueadero {

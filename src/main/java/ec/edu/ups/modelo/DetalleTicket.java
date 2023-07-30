@@ -1,6 +1,5 @@
 package ec.edu.ups.modelo;
 
-
 import java.sql.Time;
 
 import jakarta.persistence.Column;
@@ -8,8 +7,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
+
+
 
 @Entity
 public class DetalleTicket {
@@ -52,7 +52,6 @@ public class DetalleTicket {
 		//this.ticket = ticket;
 	}
 
-
 	public int getPuesto() {
 		return puesto;
 	}
@@ -66,51 +65,40 @@ public class DetalleTicket {
 	public int getId_detalleTicket() {
 		return id_detalleTicket;
 	}
-
-
 	public void setId_detalleTicket(int id_detalleTicket) {
 		this.id_detalleTicket = id_detalleTicket;
 	}
-
 
 	public Time getTotalTime() {
 		return totalTime;
 	}
 
-
 	public void setTotalTime(Time totalTime) {
 		this.totalTime = totalTime;
 	}
-
 
 	public double getTotal() {
 		return total;
 	}
 
-
 	public void setTotal(double total) {
 		this.total = total;
 	}
 
-
 	public Vehiculo getVehiculo() {
 		return vehiculo;
 	}
-
-
+	
 	public void setVehiculo(Vehiculo vehiculo) {
 		this.vehiculo = vehiculo;
 	}
-
-
 
 
 	@Override
 	public String toString() {
 		return "DetalleTicket [puesto=" + puesto + ", id_detalleTicket=" + id_detalleTicket + ", totalTime=" + totalTime
 				+ ", total=" + total + ", vehiculo=" + vehiculo + "]";
+
 	}
-	
-	
-	
-}
+
+}	

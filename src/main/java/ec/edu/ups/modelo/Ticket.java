@@ -138,6 +138,7 @@ public class Ticket  {
 		return "Ticket [id_ticket=" + id_ticket + ", fecha=" + fecha
 				+ ", puestoAsignado=" + puestoAsignado + ", hora_entrada=" + hora_entrada + ", hora_salida="
 				+ hora_salida + ", tarifa=" + tarifa + ", vehiculo=" + vehiculo + " ]";
+
 	}
 
 	
@@ -145,3 +146,6 @@ public class Ticket  {
     	    
 	
 }
+
+
+
