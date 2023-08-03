@@ -19,6 +19,8 @@ public class GestionParqueadero {
 	@Inject
 	private VehiculoDAO daoVehiculo;
 	
+	
+
 	public void guardarVehiculo(Vehiculo vehiculo) throws Exception {
 	    
 	    if(!this.validarPlacaCuenca(vehiculo.getPlaca()))
@@ -80,7 +82,11 @@ public class GestionParqueadero {
 	        }
 	    }
 
+
+	
 	private List<Boolean> puestos = new ArrayList<>(Collections.nCopies(10, false)); // Inicialmente todos los puestos están libres.
+
+	
 
 	public int asignarPuesto() {
 	    int indicePuesto = puestos.indexOf(false);
@@ -90,6 +96,8 @@ public class GestionParqueadero {
 	    }
 	    return -1;
 	}
+
+
 
 	public void liberarPuesto(int puesto) {
 	    if (puesto >= 0 && puesto < puestos.size()) {

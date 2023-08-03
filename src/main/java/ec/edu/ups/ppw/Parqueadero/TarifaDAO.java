@@ -42,4 +42,5 @@ public class TarifaDAO implements Serializable{
 		Query q = em.createQuery(jpql);
 		return q.getResultList();
 	}
+
 }

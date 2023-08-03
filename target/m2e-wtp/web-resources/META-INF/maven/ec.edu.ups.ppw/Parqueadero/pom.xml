@@ -20,6 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ec.edu.ups.ppw</groupId>
     <artifactId>Parqueadero</artifactId>
+    
     <version>0.0.1-SNAPSHOT</version>
     
     <packaging>war</packaging>

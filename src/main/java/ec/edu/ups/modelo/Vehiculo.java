@@ -72,3 +72,4 @@ public class Vehiculo {
 				+ ", color=" + color + "]";
 	}
 }
+

@@ -42,5 +42,24 @@ public class DatosParqueadero {
 		System.out.println("Hola UPS");
 		System.out.println("------------------------------------------------------");	
 		System.out.println("------------------------------------------------------");	
+		System.out.println("------------------------------------------------------");
+		
+		Ticket t = new Ticket();
+		
+		t.setHora_entrada(LocalTime.now());
+		t.setHora_salida(LocalTime.of(12,0));
+		t.setFecha(LocalDate.now());
+		daoTicket.insert(t);
+		daoTicket.getAll();
+		
+		List<Ticket> tickets = daoTicket.getAll();
+		for (Ticket ticket : tickets) {
+		    System.out.println(ticket);
+		}
+		
+		System.out.println("------------------------------------------------------");
+		
+		
 	}
+	
 }

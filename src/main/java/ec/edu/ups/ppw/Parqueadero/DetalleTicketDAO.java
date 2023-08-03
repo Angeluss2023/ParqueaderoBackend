@@ -40,3 +40,6 @@ public class DetalleTicketDAO implements Serializable {
         return q.getResultList();
     }
 }
+
+
+

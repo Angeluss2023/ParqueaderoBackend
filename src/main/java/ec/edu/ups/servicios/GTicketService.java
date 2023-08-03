@@ -1,4 +1,5 @@
 package ec.edu.ups.servicios;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -35,7 +36,7 @@ public class GTicketService {
    private VehiculoDAO daoVehiculo;
    
    @PersistenceContext
-	private EntityManager em;
+   private EntityManager em;
   
 	@POST
 	@Path("vehiculo")
@@ -93,9 +94,12 @@ public class GTicketService {
 	    }
 	}
 
+
+
 	public List<Ticket> getTickets() {
 	    return daoTicket.getAll();
-	}	
+	}
+	
 
 	@GET
 	@Path("allV")
@@ -106,6 +110,7 @@ public class GTicketService {
 	    return Response.status(Response.Status.OK).entity(listado).build();
 	}
 
+	
 	@GET
 	@Path("allT")
 	@Produces("application/json")
@@ -114,6 +119,7 @@ public class GTicketService {
 	    List<Ticket> listado = gParqueadero.getTicket();
 	    return Response.status(Response.Status.OK).entity(listado).build();
 	}
+	
 	
 	// Para Vehiculo:
 	@PUT
@@ -152,47 +158,8 @@ public class GTicketService {
 	    }
 	}
 	
-	/*/@GET
-    @Path("fecha")
-    @Produces("application/json")
-    public Response obtenerTicketsPorFecha(@PathParam("fecha") String fechaStr) {
-        try {
-            // Convertimos el string de fecha a un tipo de dato Date
-            java.text.SimpleDateFormat formatter = new java.text.SimpleDateFormat("yyyy-MM-dd");
-            java.util.Date fecha = formatter.parse(fechaStr);
-            
-            // Obtiene el siguiente día para establecer un rango de búsqueda
-            java.util.Calendar c = java.util.Calendar.getInstance();
-            c.setTime(fecha);
-            c.add(java.util.Calendar.DATE, 1);
-            java.util.Date siguienteDia = c.getTime();
-            
-            List<Ticket> tickets = em.createQuery("SELECT t FROM Ticket t WHERE t.fecha_creacion >= :fecha AND t.fecha_creacion < :siguienteDia", Ticket.class)
-                                     .setParameter("fecha", fecha)
-                                     .setParameter("siguienteDia", siguienteDia)
-                                     .getResultList();
-            
-            if(tickets.isEmpty()) {
-                return Response.status(Response.Status.NOT_FOUND)
-                               .entity("No se encontraron tickets para la fecha proporcionada.")
-                               .build();
-            }
-            
-            return Response.status(Response.Status.OK)
-                           .entity(tickets)
-                           .build();
-        } catch (NoResultException nre) {
-            return Response.status(Response.Status.NOT_FOUND)
-                           .entity("No se encontraron tickets para la fecha proporcionada.")
-                           .build();
-        } catch (Exception e) {
-            return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
-                           .entity("Error al obtener los tickets: " + e.getMessage())
-                           .build();
-        }
-    }/*/
 	
-    @GET
+	@GET
     @Path("fecha")
     @Produces("application/json")
     public Response obtenerTicketsPorFecha(@PathParam("fecha") String fechaStr) {
@@ -235,4 +202,7 @@ public class GTicketService {
                            .build();/*/
         }
     }
+
+
+
 }
