@@ -20,14 +20,11 @@ public class Vehiculo {
     String tipo_vehiculo;
     String color;
 
-    	
     @OneToMany(mappedBy = "vehiculo")
     private List<Ticket> tickets;
-
     
     public Vehiculo() {
     }
-
     
 	public Vehiculo(int id_vehiculo, String placa, String tipo_vehiculo, String color) {
 		super();
@@ -36,7 +33,6 @@ public class Vehiculo {
 		this.tipo_vehiculo = tipo_vehiculo;
 		this.color = color;
 	}
-
 	
 	public int getId_vehiculo() {
 		return id_vehiculo;

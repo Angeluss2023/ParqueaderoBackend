@@ -1,4 +1,4 @@
-package ups.edu.ec.ppw.Parqueadero;
+package ec.edu.ups.ppw.Parqueadero;
 
 import java.io.Serializable;
 import java.util.List;
@@ -10,8 +10,6 @@ import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
-
-
 
 @Stateless
 public class VehiculoDAO implements Serializable{
@@ -72,7 +70,5 @@ public class VehiculoDAO implements Serializable{
 	        System.out.println("Vehículo no encontrado");
 	        return null;
 	    }
-	}
-
-	
+	}	
 }
